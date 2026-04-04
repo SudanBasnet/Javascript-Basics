@@ -23,11 +23,27 @@
 
 //======arithmetic
 
-const a = 5;
-const b = 6;
-const c = b;
+// const a = 5;
+// const b = 6;
+// const c = b;
 
-// +, -, *, **, /,%,++,--
-const result = a + b + c;
+// // +, -, *, **, /,%,++,--
+// const result = a + b + c;
 
-console.log(result);
+// console.log(result);
+
+//====math object
+
+// const answer = Math.PI;
+// const answer = Math.round(4.4);
+// const answer = Math.pow(8, 2);
+// const answer = Math.sqrt(64);
+// const answer = Math.ceil(4.9);
+// const answer = Math.floor(4.7);
+// const answer = Math.min(8, 2, 150, 40, 30, -3, -80);
+// const answer = Math.max(8, 2, 150, 40, 30, -3, -80);
+// const answer = Math.random(); ///range(0-0.99999999......)
+// console.log(answer);
+
+// const maths = Math;
+// console.log(maths);
