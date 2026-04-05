@@ -91,11 +91,50 @@
 // const num = "876";
 // const val = +num;
 // console.log(typeof val, val);
-const num = "876.1234a";
-// const val = parseInt(num); //only integer not decimal
+// const num = "876.1234a";
+// // const val = parseInt(num); //only integer not decimal
 
-// const val = parseFloat(num); //integer after decimal...eg..56.35
+// // const val = parseFloat(num); //integer after decimal...eg..56.35
 
-const val = parseFloat(num);
-isNaN(val);
-console.log(typeof val, val, isNaN(val));
+// const val = parseFloat(num);
+// isNaN(val);
+// console.log(typeof val, val, isNaN(val));
+
+//string manipulations
+//escape character
+// const str = 'hi there my name is "sudan basnet" and I live in sydney'; //"\is the escape character"
+// console.log(str);
+// console.log(str.length);
+//length (str.length)
+// const val = str.toLowerCase(); //str.toLowerCase() str.toUpperCase()
+// const val = str[21];
+// const val = str.charAt(21);
+// console.log(typeof str);
+// const val = str.indexOf("n");
+// const val = str.lastIndexOf("n");
+// const val = str.replace("sudan", "asmita"); //character replace and is case sensitive
+// const val = str.replaceAll("n", "u"); //replace all is needed or else it will only replace one character
+// console.log(val);
+
+// const val = str.slice(3, 5); //it means start from index 3 and end with 5 but not including 5 //indexing starts from 0, 1, 2 and so on
+// const val = str.slice(3); // it will take all because it doesn't have the end
+// const val = str.slice(-5, -3); //it will count from last//count starts from -1 index
+
+// const val = str.includes(" "); //it will search for white space and it depends what input you give to search and it is case sensitive
+// const val = str.slice(3);
+// const val = str.search("asdfasd");//gives -1 to indicate that there is not this word in the sentence
+//const val = str.trim(); trim is used to trim spaces from the string which is at the fromt and back
+
+// const val = str.split("");
+// ['h', 'i', ' ', 't', 'h', 'e', 'r', 'e', ' ', 'm', 'y', ' ', 'n', 'a', 'm', 'e', ' ', 'i', 's', ' ', '"', 's', 'u', 'd', 'a', 'n', ' ', 'b', 'a', 's', 'n', 'e', 't', '"', 'a', 'n', 'd', ' ', 'I', ' ', 'l', 'i', 'v', 'e', ' ', 'i', 'n', ' ', 's', 'y', 'd', 'n', 'e', 'y']
+
+// const val = str.split(" ");
+//  ['hi', 'there', 'my', 'name', 'is', '"sudan', 'basnet"', 'and', 'I', 'live', 'in', 'sydney'].  //converts into array by seperating with white space
+// const val = str.split("i").join("j");
+
+// hj there my name js "sudan basnet" and I ljve jn sydney
+// const val = str.concat(" new text");// adding more text with concat or we can use +
+//OR
+// const val = str + "more content" + "more ";
+
+// console.log(val);
