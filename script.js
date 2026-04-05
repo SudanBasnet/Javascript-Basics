@@ -138,3 +138,45 @@
 // const val = str + "more content" + "more ";
 
 // console.log(val);
+
+// logical operators &&, ||, !,ternary
+
+// JS-conditional statements
+
+//truthy: true,2,-4, " d",{},[],()=>{}
+
+// falsy: 0, Nan,"",,null, undefined
+// const val = {}; //it holds some memory even if it is empty
+//if else
+
+// if(condition){        //only executes if the condition is a truthy value
+//     //statement
+// }
+//! will convert truthy to falsy and vice versa
+
+const age = 17;
+const vip = false;
+
+// if (age >= 18 && age < 50) {
+//   console.log("welcome to the coding party");
+// }
+
+// if ((age >= 18 && age < 50) || vip === true) {
+//   console.log("welcome to the coding party");
+// }
+
+//if else
+// if ((age >= 18 && age < 50) || vip === true) {
+//   console.log("welcome to the coding party");
+// } else {
+//   console.log("you are not allowed");
+// }
+
+//elseif
+// if (age >= 18 && age < 50) {
+//   console.log("welcome to the coding party");
+// } else if (vip === true) {
+//   console.log("you are not allowed");
+// } else {
+//   console.log("who are you");
+// }
