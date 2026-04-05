@@ -210,5 +210,43 @@
 //ternary
 // condition1 ? //run this code is : //run this code
 
-const age = 50;
-age < 50 ? console.log("welcome") : console.log("go home");
+// const age = 50;
+// age < 50 ? console.log("welcome") : console.log("go home");
+
+//Array []
+
+// const val = ["sudan", 345, "asds", null, undefined, [3, 4, 5, 6], {}, () => {}];
+// console.log(val);
+
+const fruits = ["apple", "mango", "banana", "orange"];
+// const value = fruits.length;
+// console.log(fruits, value);
+
+//adding items
+
+// fruits.push("watermelon"); //pushes on the last
+// console.log(fruits);
+// fruits.unshift("kiwi"); //adds to the front
+// console.log(fruits);
+// fruits.splice(2, 0, "plum"); //(index, center value is 0 if we are not deleting anything)
+
+//deleting items from the array
+// fruits.pop(); //take the items from the last by default
+// const val = fruits.shift(); //last fruit is removed and assigned to variable val and it is out of the array
+//  ['apple', 'mango', 'banana'] 'orange'
+// const val = fruits.splice(2, 2); //no items to remove from array as 0 is given and it will assign that to array val, splice will create an array
+
+// const val = fruits.slice(2, 2); //go to index 2 and until 2 but not include 2
+// const val = fruits.slice(2, 4); //it will not modify the original one
+// const val = fruits.toString();//to string
+// const val = fruits.toString().split(",");//to string and again to array
+
+// const val = fruits.indexOf("mangos");//gives -1 if not found
+// const val = fruits.includes("mangos"); //returns true or false
+// const val = fruits.join("_");//converts into string with _
+// console.log(fruits.sort()); //sorts in alphabetical if there are strings
+// console.log(fruits, val);
+// console.log(fruits.sort((a, b) => a - b));
+
+// fruits.reverse();
+// console.log(fruits);
