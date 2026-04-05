@@ -47,3 +47,35 @@
 
 // const maths = Math;
 // console.log(maths);
+
+// comparision--->.  it will with give true/false or boolean value, ==, ===, >, >=
+
+// const v1 = 5;
+// const v2 = "5";
+
+// const result = v1 == v2;
+// console.log(result);
+
+//data types
+// primtiive
+// string/number/boolean/undefined/null/
+
+// const value = null; //it is used to occupy memory so that we can assign some values later
+
+// console.log(typeof value, value);
+
+//reference data type
+//object
+
+// const user = {
+//   fname: "sudan",
+//   num: 29,
+// };
+
+// console.log(user);
+// const u1 = user;
+// console.log(u1);
+
+// user.fname = "sam";
+// console.log(user);
+// console.log(u1);
