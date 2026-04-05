@@ -80,3 +80,22 @@
 // console.log(user);
 // console.log(u1);
 //edited
+
+//number /0-9
+
+//safe number range -2^53-1 to 2^53-1
+
+// const num = 30_345_234_345_345;
+// console.log(num);
+
+// const num = "876";
+// const val = +num;
+// console.log(typeof val, val);
+const num = "876.1234a";
+// const val = parseInt(num); //only integer not decimal
+
+// const val = parseFloat(num); //integer after decimal...eg..56.35
+
+const val = parseFloat(num);
+isNaN(val);
+console.log(typeof val, val, isNaN(val));
