@@ -197,3 +197,18 @@
 //   default:
 //     console.log("wrong pet");
 // }
+
+//logical oeprators
+// const age = true;
+// const vip = false;
+
+// age < 50 && console.log("welcome");
+
+// const val = age || "N/A";
+// console.log(val);
+
+//ternary
+// condition1 ? //run this code is : //run this code
+
+const age = 50;
+age < 50 ? console.log("welcome") : console.log("go home");
