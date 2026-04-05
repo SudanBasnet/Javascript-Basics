@@ -154,8 +154,8 @@
 // }
 //! will convert truthy to falsy and vice versa
 
-const age = 17;
-const vip = false;
+// const age = 17;
+// const vip = false;
 
 // if (age >= 18 && age < 50) {
 //   console.log("welcome to the coding party");
@@ -179,4 +179,21 @@ const vip = false;
 //   console.log("you are not allowed");
 // } else {
 //   console.log("who are you");
+// }
+
+//switch
+// const pet = "cow";
+// switch (pet) {
+//   case "cat":
+//     console.log("meow");
+//     break;
+
+//   case "dog":
+//     console.log("whoof");
+//     break;
+//   case "cow":
+//     console.log("moo");
+//     break;
+//   default:
+//     console.log("wrong pet");
 // }
