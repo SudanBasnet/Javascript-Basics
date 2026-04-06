@@ -357,3 +357,83 @@
 // const result = money.indexOf(12); //returns index if present in array
 // //returns -1 if there are no items present
 // console.log(result);
+
+// const arrays = new Array(10).fill("💕");
+
+// console.log(arrays);
+
+//  Challenge #1
+// 1. create an array of 50 random numbers range between 1 and 100 programmatically
+
+//2. sort the array in descending order
+
+//3. get total of the array
+
+//4.Divide original array in to 2 new arrays that contains even or odd numbers only each.
+
+// 5. remove duplicate number for the original array
+
+// const Arrays = new Array(50).fill(Math.random());
+// const randomArrays = Arrays * 10;
+// const array = [];
+
+// for (let i = 0; i < 50; i++) {
+//   array.push(Math.floor(Math.random() * 100));
+// }
+
+// console.log("Original:", array);
+
+// // Create sorted copy
+// const sortedArray = [...array].sort((a, b) => a - b);
+// console.log("Sorted:", sortedArray);
+
+// // Split function
+// const splitArray = (arr) => {
+//   const mid = Math.ceil(arr.length / 2);
+//   return [arr.slice(0, mid), arr.slice(mid)];
+// };
+
+// const result = splitArray(sortedArray);
+// console.log("Split:", result);
+//  Challenge #1
+
+// // 1. create an array of 50 random numbers range between 1 and 100 programmatically
+// const arg = [];
+
+// for (let i = 0; i < 50; i++) {
+//   const num = Math.floor(Math.random() * 100) + 1;
+//   arg[i] = num;
+// }
+// //2. sort the array in descending order
+// arg.sort((a, b) => b - a);
+// // console.log(arg);
+
+// //3. get total of the array
+// const total = arg.reduce((acc, num) => acc + num);
+
+// console.log(total);
+
+//4.Divide original array in to 2 new arrays that contains even or odd numbers only each.
+// const evenArg = arg.filter((item) => item % 2 === 0);
+// const oddArg = arg.filter((item) => item % 2 !== 0);
+
+// console.log(evenArg, oddArg);
+
+// 5. remove duplicate number for the original array
+// const uniqueArg = [...new Set(arg)];
+// const uniqueArg = [];
+// for (let i = 0; i < arg.length; i++) {
+//   if (!uniqueArg.includes(arg[i])) {
+//     uniqueArg.push(arg[i]);
+//   }
+// }
+
+const uniqueArg = [];
+for (let i = 0; uniqueArg.length < 50; i++) {
+  const num = Math.floor(Math.random() * 100) + 1;
+  if (!uniqueArg.includes(num)) {
+    uniqueArg.push(num);
+  }
+  //   console.log(i);
+}
+console.log(uniqueArg);
