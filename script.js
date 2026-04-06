@@ -250,3 +250,36 @@ const fruits = ["apple", "mango", "banana", "orange"];
 
 // fruits.reverse();
 // console.log(fruits);
+
+//loops
+//for loop
+// for (let i = 0; i < 10; i++) {
+//   console.log(i);
+// }
+
+//while loops
+// let i = 0;
+// while (i < 10) {
+//   console.log(i);
+//   i++;
+// }
+//do while
+// let i = 0;
+// do {
+//   console.log(i);
+//   i++;
+// } while (i < 10);
+
+//break and continue
+
+// for (let i = 0; i <= 100; i++) {
+//   //   console.log(i);
+//   //   if (i == 10) {
+//   //     break;
+//   //   }
+
+//   if (i % 2 === 1) {
+//     continue;
+//   }
+//   console.log(i);
+// }
