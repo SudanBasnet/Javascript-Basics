@@ -218,7 +218,7 @@
 // const val = ["sudan", 345, "asds", null, undefined, [3, 4, 5, 6], {}, () => {}];
 // console.log(val);
 
-const fruits = ["apple", "mango", "banana", "orange"];
+// const fruits = ["apple", "mango", "banana", "orange"];
 // const value = fruits.length;
 // console.log(fruits, value);
 
@@ -283,3 +283,77 @@ const fruits = ["apple", "mango", "banana", "orange"];
 //   }
 //   console.log(i);
 // }
+
+// java array specific loops
+
+//for /of for(x of cars). -> for ()array
+// const fruits = ["apple", "mango", "banana", "orange"];
+// console.log(fruits);
+// const upperFruits = [];
+
+// for (let item of fruits) { //it will access all items from fruit
+//   upperFruits.push("sku-" + item.toUpperCase());
+//   console.log(item);
+// }
+// console.log(upperFruits);
+
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(i, fruits[i]);
+// }
+
+//for each()
+//for each()will not allow to create new array. you have to create an empty array and keep pushing to that array
+// fruits.forEach((fruit, index) => {
+//   console.log(index, fruit);
+// });
+//map() helps to create new array unlike foreach()
+// const newData = fruits.map((item, i) => {
+//   if (item.includes("n")) {
+//     return item;
+//   }
+//   //   console.log(item, i);
+//   //   return "SKU" + item.toUpperCase();
+// });
+
+//filter ()
+
+// const newData = fruits.filter((item, i) => item.includes("n")); //removed the curly bracket  item.includes("n")
+// //   return item.includes("n");it works same as
+// //   //   if (item.includes("n")) {
+// //   //     return true;
+// //   //   } else {
+// //   //     return false;
+// //   //   }
+
+// console.log(newData);
+
+// reduce()
+
+// const money = [12, 234, 3456, 345, 345, 345, 6534];
+// const total = money.reduce((subtotal, item) => {
+//   return subtotal + item;
+// }, 0); //0 is the initial value to add
+// console.log(money);
+// console.log(total);
+
+//every()
+// const fruits = ["apple", "mango", "banana", "orange"];
+// const result = fruits.every((item) => {
+//   console.log(item);
+//   return item.includes("a"); //test condition
+// });
+
+// console.log(result);
+
+//includes(), find and indexOf()
+
+// const money = [12, 234, 3456, 345, 345, 345, 6534];
+// // const result = money.includes(12); //returns boolean true or false
+// // const result = money.find((item) => {
+// //   return item === 3245;
+// // });
+// // const result = money.find((item) => item === 3245); //anonymous function
+
+// const result = money.indexOf(12); //returns index if present in array
+// //returns -1 if there are no items present
+// console.log(result);
