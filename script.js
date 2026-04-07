@@ -466,3 +466,36 @@
 //   chat.innerHTML += "<p>Bot" + reply + "</p>";
 //   input.value = "";
 // }
+
+//data manipulation (objects)
+const person = {
+  name: "sudan basnet",
+  phone: 1234234,
+  isMarried: true,
+  skills: ["HTML", "CSS", "javascript", ["flex", "grid"]],
+  hasPet: undefined,
+  parents: {
+    f: "harry",
+    m: "merry",
+  },
+  bio: () => {
+    return "hi there";
+  },
+};
+
+// const data = person.name;
+// const data = person["parents"];
+// const data = person.skills[1];
+// const data = person.skills[3][1];
+// const data = person.parents.f;
+// const data = person.bio();
+
+//updating the object
+// person.name = "Asmita";
+//adding new property
+// person.address = "2 railway pde";
+// person.parents.md = "2020";
+// person.skills.push("any");
+// person.skills[3].push(123);
+
+console.log(person);
