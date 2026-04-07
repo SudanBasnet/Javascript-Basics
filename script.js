@@ -428,12 +428,41 @@
 //   }
 // }
 
-const uniqueArg = [];
-for (let i = 0; uniqueArg.length < 50; i++) {
-  const num = Math.floor(Math.random() * 100) + 1;
-  if (!uniqueArg.includes(num)) {
-    uniqueArg.push(num);
-  }
-  //   console.log(i);
-}
-console.log(uniqueArg);
+// const uniqueArg = [];
+// for (let i = 0; uniqueArg.length < 50; i++) {
+//   const num = Math.floor(Math.random() * 100) + 1;
+//   if (!uniqueArg.includes(num)) {
+//     uniqueArg.push(num);
+//   }
+//   //   console.log(i);
+// }
+// console.log(uniqueArg);
+//simple chat bot made but not working
+// const questions = ["hello", "how are you", "name", "help", "bye"];
+// const answers = [
+//   "Hi",
+//   "I am all good",
+//   "I am your chatbot",
+//   "Try saying Hello or bye",
+//   "See you later",
+// ];
+
+// function sendMessage() {
+//   const input = document.getElementById("userInput");
+//   const chat = document.getElementById("chat");
+//   const userText = input.value.toLowerCase();
+
+//   //show user message
+//   CharacterData.innerHTML += "<p> You:" + userText + "</p>";
+//   let reply = "I don't understand";
+
+//   //search matching question
+//   for (let i = 0; i < questions.length; i++) {
+//     if (userText.includes(questions[i])) {
+//       reply = answers[i];
+//       break;
+//     }
+//   }
+//   chat.innerHTML += "<p>Bot" + reply + "</p>";
+//   input.value = "";
+// }
