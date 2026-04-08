@@ -468,20 +468,20 @@
 // }
 
 //data manipulation (objects)
-const person = {
-  name: "sudan basnet",
-  phone: 1234234,
-  isMarried: true,
-  skills: ["HTML", "CSS", "javascript", ["flex", "grid"]],
-  hasPet: undefined,
-  parents: {
-    f: "harry",
-    m: "merry",
-  },
-  bio: () => {
-    return "hi there";
-  },
-};
+// const person = {
+//   name: "sudan basnet",
+//   phone: 1234234,
+//   isMarried: true,
+//   skills: ["HTML", "CSS", "javascript", ["flex", "grid"]],
+//   hasPet: undefined,
+//   parents: {
+//     f: "harry",
+//     m: "merry",
+//   },
+//   bio: () => {
+//     return "hi there";
+//   },
+// };
 
 // const data = person.name;
 // const data = person["parents"];
@@ -498,4 +498,121 @@ const person = {
 // person.skills.push("any");
 // person.skills[3].push(123);
 
-console.log(person);
+// console.log(person);
+
+//delete data
+// person.phone = undefined;
+//delete.person.phone;  it will delete but it stills hold memory.
+//person.skills.pop();
+// delete person.parents.f;
+
+// console.log(person);
+
+//destructuring:const {name}= obj
+
+// const person = {
+//   name: "sudan basnet",
+//   phone: 1234234,
+//   isMarried: true,
+//   skills: ["HTML", "CSS", "javascript", ["flex", "grid"]],
+//   hasPet: undefined,
+//   parents: {
+//     f: "harry",
+//     m: "merry",
+//   },
+//   bio: () => {
+//     return "hi there";
+//   },
+// };
+
+// const userName = person.name;
+// console.log(name);
+
+// const { name, phone, parent, room = "N/A" } = person;
+// // console.log(parents.f);
+
+// console.log(name, phone);
+// console.log(f, m);
+
+//REST METHOD
+// const { name, phone, parents, ...restOfTheProperties } = person;
+
+// console.log(restOfTheProperties);
+
+// //spread
+// const career = {
+//   title: "soft eng",
+//   salary: "150k",
+// };
+
+// // const combo = { ...career }; //taking the property and spreading inside the object
+
+// // console.log(combo);
+
+// //shallow vs deep copy (objects)
+
+// const person = {
+//   name: "sudan basnet",
+//   phone: 1234234,
+//   isMarried: true,
+//   skills: ["HTML", "CSS", "javascript", ["flex", "grid"]],
+//   hasPet: undefined,
+//   parents: {
+//     f: "harry",
+//     m: "merry",
+//   },
+//   bio: () => {
+//     return "hi there";
+//   },
+// };
+
+// //shallow copy
+// // // const p1 = person;
+// // const p1 = { ...person };
+// // console.log(person);
+// // // console.log(p1);
+// // // const p1 = Object.assign({}, person);
+// // person.parents.f = "asmita";
+// // person.name = "Sudan";
+// // console.log(person);
+// // console.log(p1);
+
+// //here only first level property is copied while nested object will have same reference to the object
+
+// //deep copy
+// // converting object into strings
+// // const p1 = JSON.stringify(person);
+
+// // const p1 = JSON.parse(JSON.stringify(person));
+// // console.log(p1);
+// // person.parents.f = "asmita";
+// // person.name = "Sudan";
+// console.log(person);
+// // console.log(p1);
+// for (let key in person) {
+//   //key is a variable here
+//   // console.log(key);
+//   console.log(key, ":", person[key]);
+// }
+
+// // const personArg = Object.entries(person);
+// // const personArg = Object.keys(person);
+// const personArg = Object.values(person);
+
+// console.log(personArg);
+
+// Date Manipulation
+// const today = Date();
+// const today = new Date();
+// const today = Date.now();
+// const data = today.getDate();
+// const data = today.getFullYear();
+// const today = new Date("2020-8-29");
+// const data = today.getDay();
+// const data = today.getMonth();
+// const data = today.toLocaleTimeString();
+// const data = today.toLocaleDateString();
+// const data = today.toISOString();
+// today.setDate(today.getDate() + 10);
+
+// console.log(today.getTime());
