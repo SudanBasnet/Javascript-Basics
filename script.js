@@ -616,3 +616,70 @@
 // today.setDate(today.getDate() + 10);
 
 // console.log(today.getTime());
+//Here is the challenge coders.
+
+// Date challange : Create a function that takes a food and the expire data and retuns one of the followings:
+// 1. if expired: AB is expred 4 days ago
+// 2. if not expired: you have 10 days to use this product.
+
+// const millisecperday = 24 * 60 * 60 * 1000;
+
+// const checkexp = ({ name, exp }) => {
+//   const today = Date.now();
+//   const expTs = new Date(exp).getTime();
+//   //return AB exp 4 days ago
+//   //return you have 10 days to use this product
+//   const diffDay = Math.floor((expTs - today) / millisecperday);
+//   if (diffDay < 1) {
+//     return `${name} is expired ${Math.abs(diffDay)} days ago`;
+//   } else {
+//     return `you have 10 days to use this ${name}`;
+//   }
+// };
+
+// const food = [
+//   {
+//     name: "tuna",
+//     exp: "2024-03-25",
+//   },
+//   {
+//     name: "milk",
+//     exp: "2024-04-05",
+//   },
+// ];
+
+// food.map((food) => {
+//   const result = checkexp(food);
+// });
+const millisecperday = 24 * 60 * 60 * 1000;
+
+const checkexp = ({ name, exp }) => {
+  const today = Date.now();
+  const expTs = new Date(exp).getTime();
+
+  const diffDay = Math.floor((expTs - today) / millisecperday);
+
+  if (diffDay < 0) {
+    return `${name} is expired ${Math.abs(diffDay)} days ago`;
+  } else if (diffDay === 0) {
+    return `${name} expires today`;
+  } else {
+    return `you have ${diffDay} days to use this ${name}`;
+  }
+};
+
+const food = [
+  {
+    name: "tuna",
+    exp: "2026-04-25",
+  },
+  {
+    name: "milk",
+    exp: "2026-04-05",
+  },
+];
+
+// print results
+food.forEach((item) => {
+  console.log(checkexp(item));
+});
