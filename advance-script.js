@@ -119,6 +119,54 @@
 
 //procedural PP
 
+// const sudobj = {
+//   name: "sudan",
+//   add: "sydney",
+//   dob: "2000-1-1",
+// };
+
+// // function bio(p) {
+// //   return `this is ${p.name} from ${p.add} and I am ${getAge(p.dob)} years of old`;
+// // }
+
+// // function getAge(dob) {
+// //   return new Date().getFullYear() - new Date(dob).getFullYear();
+// // }
+
+// // function birthday(p) {
+// //   return `happy birthday ${p.name}!! Now you are ${getAge(p.dob) + 1} years old`;
+// // }
+
+// // console.log(birthday(sudobj));
+
+// //4 pillars of OOP
+
+// //Encapsulation /abstraction
+
+// class Person {
+//   #dob;
+//   constructor(obj) {
+//     this.name = obj.name;
+//     this.add = obj.add;
+//     this.#dob = obj.dob;
+//   }
+
+//   bio() {
+//     return `this is ${this.name} from ${this.add} and I am ${this.#getAge(this.#dob)} years of old`;
+//   }
+//   #getAge() {
+//     return new Date().getFullYear() - new Date(this.#dob).getFullYear();
+//   }
+//   birthday() {
+//     return `happy birthday ${this.name}!! Now you are ${this.#getAge(this.#dob) + 1} years old`;
+//   }
+// }
+
+// const sudanInfo = new Person(sudobj);
+// console.log(sudanInfo);
+
+// inheritance
+
 const sudobj = {
   name: "sudan",
   add: "sydney",
@@ -141,26 +189,56 @@ const sudobj = {
 
 //4 pillars of OOP
 
-//Encapsulation
+//Encapsulation /abstraction
 
-class Person {
-  #dob;
-  constructor(obj) {
-    this.name = obj.name;
-    this.add = obj.add;
-    this.#dob = obj.dob;
+class Living {
+  constructor(name, add) {
+    this.name = name;
+    this.add = add;
   }
-
   bio() {
-    return `this is ${this.name} from ${this.add} and I am ${this.#getAge(this.#dob)} years of old`;
-  }
-  #getAge() {
-    return new Date().getFullYear() - new Date(this.#dob).getFullYear();
-  }
-  birthday() {
-    return `happy birthday ${this.name}!! Now you are ${this.#getAge(this.#dob) + 1} years old`;
+    return `this is ${this.name} from ${this.add}`;
   }
 }
 
-const sudanInfo = new Person(sudobj);
-console.log(sudanInfo.getAge());
+class Person extends Living {
+  constructor(obj) {
+    super(obj.name, obj.add);
+
+    this.career = obj.career;
+  }
+
+  career() {
+    return `their career is ${this.career}`;
+  }
+}
+
+class Animal extends Living {
+  constructor(obj) {
+    super(obj.name, obj.add);
+
+    this.strength = obj.strength;
+  }
+
+  strength() {
+    return `their strength is ${this.strength}`;
+  }
+}
+
+const p1 = {
+  name: "sudan",
+  add: "sydney",
+  career: "soft.engineer",
+};
+
+const monkey1 = {
+  name: "monkey",
+  add: "zoo",
+  strength: "can jump betn trees",
+};
+
+const mkInfo = new Animal(monkey1);
+console.log(mkInfo.bio());
+
+const P1 = new Person(p1);
+console.log(P1.bio());
