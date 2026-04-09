@@ -144,22 +144,23 @@ const sudobj = {
 //Encapsulation
 
 class Person {
+  #dob;
   constructor(obj) {
     this.name = obj.name;
     this.add = obj.add;
-    this.dob = obj.dob;
+    this.#dob = obj.dob;
   }
 
   bio() {
-    return `this is ${this.name} from ${this.add} and I am ${this.getAge(this.dob)} years of old`;
+    return `this is ${this.name} from ${this.add} and I am ${this.#getAge(this.#dob)} years of old`;
   }
-  getAge() {
-    return new Date().getFullYear() - new Date(this.dob).getFullYear();
+  #getAge() {
+    return new Date().getFullYear() - new Date(this.#dob).getFullYear();
   }
   birthday() {
-    return `happy birthday ${this.name}!! Now you are ${this.getAge(this.dob) + 1} years old`;
+    return `happy birthday ${this.name}!! Now you are ${this.#getAge(this.#dob) + 1} years old`;
   }
 }
 
 const sudanInfo = new Person(sudobj);
-console.log(sudanInfo.birthday());
+console.log(sudanInfo.getAge());
