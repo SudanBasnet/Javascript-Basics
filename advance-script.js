@@ -208,22 +208,22 @@ class Person extends Living {
     this.career = obj.career;
   }
 
-  career() {
+  mycareer() {
     return `their career is ${this.career}`;
   }
 }
 
-class Animal extends Living {
-  constructor(obj) {
-    super(obj.name, obj.add);
+// class Animal extends Living {
+//   constructor(obj) {
+//     super(obj.name, obj.add);
 
-    this.strength = obj.strength;
-  }
+//     this.strength = obj.strength;
+//   }
 
-  strength() {
-    return `their strength is ${this.strength}`;
-  }
-}
+//   strength() {
+//     return `their strength is ${this.strength}`;
+//   }
+// }
 
 const p1 = {
   name: "sudan",
@@ -231,14 +231,32 @@ const p1 = {
   career: "soft.engineer",
 };
 
-const monkey1 = {
-  name: "monkey",
-  add: "zoo",
-  strength: "can jump betn trees",
+// const monkey1 = {
+//   name: "monkey",
+//   add: "zoo",
+//   strength: "can jump betn trees",
+// };
+
+// const mkInfo = new Animal(monkey1);
+// console.log(mkInfo.bio());
+
+// const P1 = new Person(p1);
+// console.log(P1.mycareer());
+
+//polymorphism
+class Student extends Person {
+  constructor(s1) {
+    super(s1);
+  }
+  mycareer() {
+    return `currently studying ${this.career}`;
+  }
+}
+
+const s1 = {
+  name: "asmita",
+  add: "sydney",
+  career: "AIN",
 };
-
-const mkInfo = new Animal(monkey1);
-console.log(mkInfo.bio());
-
-const P1 = new Person(p1);
-console.log(P1.bio());
+const s1info = new Student(s1);
+console.log(s1info.mycareer());
