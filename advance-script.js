@@ -263,41 +263,132 @@
 
 //abstraction
 
-class Living {
-  constructor(name, add) {
-    this.name = name;
-    this.add = add;
-    if (new.target === Living) {
-      throw new Error("can't instantiate abstract class directly");
-    }
-  }
-  bio() {
-    return `this is ${this.name} from ${this.add}`;
-  }
-}
+// class Living {
+//   constructor(name, add) {
+//     this.name = name;
+//     this.add = add;
+//     if (new.target === Living) {
+//       throw new Error("can't instantiate abstract class directly");
+//     }
+//   }
+//   bio() {
+//     return `this is ${this.name} from ${this.add}`;
+//   }
+// }
 
-class Person extends Living {
-  constructor(obj) {
-    super(obj.name, obj.add);
+// class Person extends Living {
+//   constructor(obj) {
+//     super(obj.name, obj.add);
 
-    this.career = obj.career;
-  }
+//     this.career = obj.career;
+//   }
 
-  mycareer() {
-    return `their career is ${this.career}`;
-  }
-}
+//   mycareer() {
+//     return `their career is ${this.career}`;
+//   }
+// }
 
-const p1 = {
-  name: "sudan",
-  add: "sydney",
-  career: "soft.engineer",
-};
+// const p1 = {
+//   name: "sudan",
+//   add: "sydney",
+//   career: "soft.engineer",
+// };
 
-// const P1obj = new Living("asmita", "sydney");
+// // const P1obj = new Living("asmita", "sydney");
+
+// // console.log(P1obj.bio());
+
+// const P1obj = new Person(p1);
 
 // console.log(P1obj.bio());
 
-const P1obj = new Person(p1);
+//Functional Programming
 
-console.log(P1obj.bio());
+// const person = Object.freeze({
+//   name: "sudan",
+//   career: "soft eng",
+// });
+
+// const newP = { ...person, name: "Sam" };
+// console.log(person, newP);
+
+//pure Function
+
+// const add = (a, b) => {
+//   return a + b;
+// };
+// console.log(add(2, 3));
+
+//impure functions
+// let total = 0;
+// const add = (a, b) => {
+//   total = a + b;
+//   return total;
+// };
+// console.log(add(2, 3));
+
+//First class citizen and higher order Function
+
+// const add = (a, b) => {
+//   return a + b;
+// };
+// const sub = (a, b) => {
+//   return a - b;
+// };
+
+// const multSqr = (val, exponent) => {
+//   return Math.pow(val, exponent);
+// };
+
+// const calculator = (func, x, y) => {
+//   return func(x, y);
+// };
+
+// const result = calculator(add, 2, 3);
+// console.log(calculator(add, 2, 3));
+// console.log(multSqr(3, 3));
+
+// const calc2 = (a, b) => {
+//   const ttl = a + b;
+// const multSqr = (exponent) => {
+//   return Math.pow(ttl, exponent);
+// };
+//   return multSqr;
+// };
+
+// // const total = calc2(2, 3);
+// const data = calc2(2, 3)(2);
+// console.log(data);
+
+//function composition
+
+// const calc3 = (a, b, c) => multSqr(add(a, b), c);
+// console.log(calc3(2, 4, 2));
+
+//recursion function
+
+// debugger;
+// let i = 0;
+// const counter = () => {
+//   console.log(i++);
+//   if (i === 10) {
+//     return;
+//   }
+//   counter();
+// };
+
+// console.log(counter());
+// console.log(i);
+
+// let sum = 0;
+// const totaling = (nums) => {
+//   sum += nums.pop();
+//   if (!nums.length) {
+//     return sum;
+//   }
+//   return totaling(nums);
+// };
+
+// const nums = [23, 234, 345, 54, 234];
+
+// console.log(totaling(nums));
