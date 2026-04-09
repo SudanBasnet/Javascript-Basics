@@ -86,12 +86,33 @@
 // console.log(sudObj, sudObj.bio());
 
 // constructor function
-function AboutPerson(name, add) {
-  this.name = name;
-  this.add = add;
+// function AboutPerson(name, add) {
+//   this.name = name;
+//   this.add = add;
+// }
+// AboutPerson.prototype.bio = function () {
+//   return `hey this is ${this.name}, live in ${this.add}`;
+// };
+// const sudObj = new AboutPerson("sudan", "sydney");
+// console.log(sudObj, sudObj.bio());
+
+// class based OOP
+
+class Person {
+  constructor(name, add) {
+    this.name = name;
+    this.add = add;
+  }
+  bio() {
+    return `hey this is ${this.name}, live in ${this.add}`;
+  }
+  nameUpper() {
+    this.name = this.name.toUpperCase();
+  }
 }
-AboutPerson.prototype.bio = function () {
-  return `hey this is ${this.name}, live in ${this.add}`;
-};
-const sudObj = new AboutPerson("sudan", "sydney");
-console.log(sudObj, sudObj.bio());
+
+const sudobj = new Person("sudan", "address");
+console.log(sudobj.bio());
+sudobj.nameUpper();
+console.log(sudobj.bio());
+console.log(sudobj);
