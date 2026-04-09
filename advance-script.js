@@ -54,3 +54,44 @@
 //   }
 //   setTimeout(print, 0);
 // }
+
+//OOP
+
+//object
+
+// const person = {
+//   name: "sudan",
+//   add: "sydney",
+//   bio() {
+//     console.log(this);
+//     return `hey this is ${this.name}, live in ${this.add}`;
+//   },
+// };
+
+// console.log(person.bio());
+
+//factory function
+
+// function aboutPerson(name, add) {
+//   return {
+//     name,
+//     add,
+//     bio() {
+//       return `hey this is ${this.name}, live in ${this.add}`;
+//     },
+//   };
+// }
+
+// const sudObj = aboutPerson("sudan", "sydney");
+// console.log(sudObj, sudObj.bio());
+
+// constructor function
+function AboutPerson(name, add) {
+  this.name = name;
+  this.add = add;
+}
+AboutPerson.prototype.bio = function () {
+  return `hey this is ${this.name}, live in ${this.add}`;
+};
+const sudObj = new AboutPerson("sudan", "sydney");
+console.log(sudObj, sudObj.bio());
