@@ -98,21 +98,68 @@
 
 // class based OOP
 
+// class Person {
+//   constructor(name, add) {
+//     this.name = name;
+//     this.add = add;
+//   }
+//   bio() {
+//     return `hey this is ${this.name}, live in ${this.add}`;
+//   }
+//   nameUpper() {
+//     this.name = this.name.toUpperCase();
+//   }
+// }
+
+// const sudobj = new Person("sudan", "address");
+// console.log(sudobj.bio());
+// sudobj.nameUpper();
+// console.log(sudobj.bio());
+// console.log(sudobj);
+
+//procedural PP
+
+const sudobj = {
+  name: "sudan",
+  add: "sydney",
+  dob: "2000-1-1",
+};
+
+// function bio(p) {
+//   return `this is ${p.name} from ${p.add} and I am ${getAge(p.dob)} years of old`;
+// }
+
+// function getAge(dob) {
+//   return new Date().getFullYear() - new Date(dob).getFullYear();
+// }
+
+// function birthday(p) {
+//   return `happy birthday ${p.name}!! Now you are ${getAge(p.dob) + 1} years old`;
+// }
+
+// console.log(birthday(sudobj));
+
+//4 pillars of OOP
+
+//Encapsulation
+
 class Person {
-  constructor(name, add) {
-    this.name = name;
-    this.add = add;
+  constructor(obj) {
+    this.name = obj.name;
+    this.add = obj.add;
+    this.dob = obj.dob;
   }
+
   bio() {
-    return `hey this is ${this.name}, live in ${this.add}`;
+    return `this is ${this.name} from ${this.add} and I am ${this.getAge(this.dob)} years of old`;
   }
-  nameUpper() {
-    this.name = this.name.toUpperCase();
+  getAge() {
+    return new Date().getFullYear() - new Date(this.dob).getFullYear();
+  }
+  birthday() {
+    return `happy birthday ${this.name}!! Now you are ${this.getAge(this.dob) + 1} years old`;
   }
 }
 
-const sudobj = new Person("sudan", "address");
-console.log(sudobj.bio());
-sudobj.nameUpper();
-console.log(sudobj.bio());
-console.log(sudobj);
+const sudanInfo = new Person(sudobj);
+console.log(sudanInfo.birthday());
