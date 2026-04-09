@@ -651,35 +651,35 @@
 // food.map((food) => {
 //   const result = checkexp(food);
 // });
-const millisecperday = 24 * 60 * 60 * 1000;
+// const millisecperday = 24 * 60 * 60 * 1000;
 
-const checkexp = ({ name, exp }) => {
-  const today = Date.now();
-  const expTs = new Date(exp).getTime();
+// const checkexp = ({ name, exp }) => {
+//   const today = Date.now();
+//   const expTs = new Date(exp).getTime();
 
-  const diffDay = Math.floor((expTs - today) / millisecperday);
+//   const diffDay = Math.floor((expTs - today) / millisecperday);
 
-  if (diffDay < 0) {
-    return `${name} is expired ${Math.abs(diffDay)} days ago`;
-  } else if (diffDay === 0) {
-    return `${name} expires today`;
-  } else {
-    return `you have ${diffDay} days to use this ${name}`;
-  }
-};
+//   if (diffDay < 0) {
+//     return `${name} is expired ${Math.abs(diffDay)} days ago`;
+//   } else if (diffDay === 0) {
+//     return `${name} expires today`;
+//   } else {
+//     return `you have ${diffDay} days to use this ${name}`;
+//   }
+// };
 
-const food = [
-  {
-    name: "tuna",
-    exp: "2026-04-25",
-  },
-  {
-    name: "milk",
-    exp: "2026-04-05",
-  },
-];
+// const food = [
+//   {
+//     name: "tuna",
+//     exp: "2026-04-25",
+//   },
+//   {
+//     name: "milk",
+//     exp: "2026-04-05",
+//   },
+// ];
 
-// print results
-food.forEach((item) => {
-  console.log(checkexp(item));
-});
+// // print results
+// food.forEach((item) => {
+//   console.log(checkexp(item));
+// });
