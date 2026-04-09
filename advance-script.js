@@ -167,11 +167,11 @@
 
 // inheritance
 
-const sudobj = {
-  name: "sudan",
-  add: "sydney",
-  dob: "2000-1-1",
-};
+// const sudobj = {
+//   name: "sudan",
+//   add: "sydney",
+//   dob: "2000-1-1",
+// };
 
 // function bio(p) {
 //   return `this is ${p.name} from ${p.add} and I am ${getAge(p.dob)} years of old`;
@@ -191,10 +191,85 @@ const sudobj = {
 
 //Encapsulation /abstraction
 
+// class Living {
+//   constructor(name, add) {
+//     this.name = name;
+//     this.add = add;
+//   }
+//   bio() {
+//     return `this is ${this.name} from ${this.add}`;
+//   }
+// }
+
+// class Person extends Living {
+//   constructor(obj) {
+//     super(obj.name, obj.add);
+
+//     this.career = obj.career;
+//   }
+
+//   mycareer() {
+//     return `their career is ${this.career}`;
+//   }
+// }
+
+// // class Animal extends Living {
+// //   constructor(obj) {
+// //     super(obj.name, obj.add);
+
+// //     this.strength = obj.strength;
+// //   }
+
+// //   strength() {
+// //     return `their strength is ${this.strength}`;
+// //   }
+// // }
+
+// const p1 = {
+//   name: "sudan",
+//   add: "sydney",
+//   career: "soft.engineer",
+// };
+
+// const monkey1 = {
+//   name: "monkey",
+//   add: "zoo",
+//   strength: "can jump betn trees",
+// };
+
+// const mkInfo = new Animal(monkey1);
+// console.log(mkInfo.bio());
+
+// const P1 = new Person(p1);
+// console.log(P1.mycareer());
+
+//polymorphism
+// class Student extends Person {
+//   constructor(s1) {
+//     super(s1);
+//   }
+//   mycareer() {
+//     return `currently studying ${this.career}`;
+//   }
+// }
+
+// const s1 = {
+//   name: "asmita",
+//   add: "sydney",
+//   career: "AIN",
+// };
+// const s1info = new Student(s1);
+// console.log(s1info.mycareer());
+
+//abstraction
+
 class Living {
   constructor(name, add) {
     this.name = name;
     this.add = add;
+    if (new.target === Living) {
+      throw new Error("can't instantiate abstract class directly");
+    }
   }
   bio() {
     return `this is ${this.name} from ${this.add}`;
@@ -213,50 +288,16 @@ class Person extends Living {
   }
 }
 
-// class Animal extends Living {
-//   constructor(obj) {
-//     super(obj.name, obj.add);
-
-//     this.strength = obj.strength;
-//   }
-
-//   strength() {
-//     return `their strength is ${this.strength}`;
-//   }
-// }
-
 const p1 = {
   name: "sudan",
   add: "sydney",
   career: "soft.engineer",
 };
 
-// const monkey1 = {
-//   name: "monkey",
-//   add: "zoo",
-//   strength: "can jump betn trees",
-// };
+// const P1obj = new Living("asmita", "sydney");
 
-// const mkInfo = new Animal(monkey1);
-// console.log(mkInfo.bio());
+// console.log(P1obj.bio());
 
-// const P1 = new Person(p1);
-// console.log(P1.mycareer());
+const P1obj = new Person(p1);
 
-//polymorphism
-class Student extends Person {
-  constructor(s1) {
-    super(s1);
-  }
-  mycareer() {
-    return `currently studying ${this.career}`;
-  }
-}
-
-const s1 = {
-  name: "asmita",
-  add: "sydney",
-  career: "AIN",
-};
-const s1info = new Student(s1);
-console.log(s1info.mycareer());
+console.log(P1obj.bio());
